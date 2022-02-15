@@ -2,7 +2,8 @@ Derek is attempting to create a program to help his family understand his irrati
 He is using his own programming language, ZQ, which supports multiple inheritance. ZQ function dispatch 
 is calculated using depth first alphabetical iteration of superclasses. 
 
-Given this set of classes, which foods (concrete classes) does Derek like?
+Given this set of classes, which foods (concrete classes) does Derek like? If the function Edible::isGood
+determines Derek's opinion of the food.
 
 
 interface Edible {
