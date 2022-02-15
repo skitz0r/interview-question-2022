@@ -1,0 +1,42 @@
+Building on the behavior described in Question 1, provide pseudocode for the methods marked TODO. Assume all other methods and fields are populated and work as implied. 
+
+class ClassGraph {
+
+	/**
+	 * Provides a dispatch order iterator over the super classes of the [Class] argument.
+	 */
+	fun getSuperClassIterator(claz: Class): Iterator<Class> {
+		// TODO: Complete this is part of the assignment.
+	}
+
+	/**
+	 * Provides the direct parents of a the [Class] argument.
+	 */ 
+	fun getSuperClasses(claz: Class): Set<Class> {
+		// Assume complete.
+	}
+}
+
+class ImplementationProvider {
+
+	/**
+	 * Returns the [FunctionImplementation] defined for this [Class] and [Function] or null if none exist.
+	 */
+	fun getImplementation(function: Function, claz: Class): FunctionImplementation? {
+		// Assume complete.
+	}
+}
+
+
+class DispatchCalculator {
+
+	val implementationProvider: ImplementationProvider // Assume fully initialized.
+
+	/**
+	 * Produces a Map for a given [FunctionDefinition] and [ClassGraph] which keys each receiver 
+	 * class to the [FunctionImplementation] which should execute on an instance of the receiver.
+	 */
+	fun calculateDispatch(function: Function, graph: ClassGraph): Map<Class, FunctionImplementation> {
+		// TODO: Complete this as part of the assignment.
+	}
+}

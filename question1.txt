@@ -1,0 +1,42 @@
+Derek is attempting to create a program to help his family understand his irrational food preferences. 
+He is using his own programming language, ZQ, which supports multiple inheritance. ZQ function dispatch 
+is calculated using depth first alphabetical iteration of superclasses. 
+
+Given this set of classes, which foods (concrete classes) does Derek like?
+
+
+interface Edible {
+	default fun isGood(): Boolean = true
+}
+
+abstract class Vegetable implements Edible {
+ 	val isHealthy: Boolean
+	override fun isGood(): Boolean = isHealthy
+}
+
+abstract class Fruit implements Edible {
+}
+
+class Apple extends Fruit {
+}
+
+class Cucumber extends Fruit {
+	override val isGood(): Boolean = false
+}
+
+class Smoothie extends Fruit, Vegetable {
+	val isHealthy = false
+}
+
+
+class Broccoli extends Vegetable {
+	val isHealthy = true
+}
+
+class AppleSauce extends Apple, Smoothie {
+	val isHealthy = false
+}
+
+class WeirdSalad extends Cucumber, Broccoli {
+}
+
